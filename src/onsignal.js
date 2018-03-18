@@ -57,7 +57,7 @@ class OnSignal {
     }
 
     isSubscribed() {
-        return getCookie('oneSignalPlayerId') != null && getCookie('oneSignalPlayerId') != '';
+        return getCookie('oneSignalPlayerId') != null;
     }
     subscribe( options = {} ) {
         let defaults = {
@@ -87,7 +87,7 @@ function extend() {
 }
 function getCookie(a) {
     let b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
-    return b ? b.pop() : '';
+    return b ? b.pop() : null;
 }
 
 
