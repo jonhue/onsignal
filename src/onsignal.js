@@ -57,9 +57,9 @@ class OnSignal {
     }
 
     isSubscribed() {
-        return getCookie('oneSignalPlayerId') != null;
+        return getCookie('oneSignalPlayerId') != null && getCookie('oneSignalPlayerId') != '';
     }
-    subscribe(options = {}) {
+    subscribe( options = {} ) {
         let defaults = {
             modalPrompt: false
         };
